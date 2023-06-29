@@ -1,0 +1,7 @@
+htbuilder==0.6.1
+streamlit
+streamlit-extras
+streamlit-authenticator==0.1.5
+python-dotenv
+pickle5
+PyGithub
