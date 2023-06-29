@@ -3,13 +3,12 @@ from github import Github
 import uuid
 
 # GitHub credentials
-ACCESS_TOKEN = "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"
-REPO_OWNER = "VINTERN-A1"
+ACCESS_TOKEN = "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"
 REPO_NAME = "repo"
 
 # Initialize the GitHub object with the access token
 g = Github(ACCESS_TOKEN)
-repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
+repo = g.get_user().get_repo(REPO_NAME)
 
 placeholder = st.empty()
 email = st.text_input("Email", autocomplete=None)
