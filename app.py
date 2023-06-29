@@ -1,81 +1,34 @@
-
 import streamlit as st
 from github import Github
 import uuid
 
-
-#import streamlit as st
 # GitHub credentials
-ACCESS_TOKEN = "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"
+ACCESS_TOKEN = "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"
+REPO_OWNER = "VINTERN-A1"
 REPO_NAME = "repo"
 
-# Initialize the GitHub object with access token
+# Initialize the GitHub object with the access token
 g = Github(ACCESS_TOKEN)
-repo = g.get_user().get_repo(REPO_NAME)
+repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
 
 placeholder = st.empty()
-email = st.text_input("Email",autocomplete = None)
+email = st.text_input("Email", autocomplete=None)
 st.markdown(" ")
-name=st.text_input("User name",autocomplete = None) 
+name = st.text_input("User name", autocomplete=None)
 st.markdown(" ")
-password = st.text_input("Password",autocomplete = None)  
-if st.button("Sign Up",key="option_tab2"): 
+password = st.text_input("Password", autocomplete=None)
+if st.button("Sign Up", key="option_tab2"):
     # Generate a random file name
-    file_name = str("signup")+str(uuid.uuid4())+ ".txt"
+    file_name = str(uuid.uuid4()) + ".txt"
+
     # Create the text to be written to the file
     file_contents = f"email: {email}\n"
-    file_contents1= f"name: {name}\n"
-    file_contents2= f"password:{password}\n"
-            
-    # Write the file to disk
-    with open(file_name, "w") as f:
-        f.write(file_contents)
-        f.write(file_contents1)
-        f.write(file_contents2)
-            
+    file_contents += f"name: {name}\n"
+    file_contents += f"password: {password}\n"
+
     # Upload the file to GitHub
-    with open(file_name, "r") as f:
-        contents = f.read()
-    repo.create_file(file_name, "Committing form data", contents)
-            
+    repo.create_file(file_name, "Committing form data", file_contents)
+
     # Display a success message
-    st.success("Succesfully Registered")
+    st.success("Successfully Registered")
     placeholder = st.empty()
-
-
-import streamlit as st
-from github import Github
-
-# GitHub credentials
-github_username = 'vintern-a1'
-github_token = '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'
-
-# GitHub repository info
-repo_owner = 'vintern-a1'
-repo_name = 'repo'
-
-# Create a new issue in the GitHub repository
-def create_github_issue(text):
-    try:
-        g = Github(github_token)
-        repo = g.get_repo(f'{repo_owner}/{repo_name}')
-        issue = repo.create_issue(title='Streamlit Form Submission', body=text)
-        return issue
-    except Exception as e:
-        st.error(f'Error creating GitHub issue: {e}')
-
-# Streamlit form
-def streamlit_form():
-    st.header('GitHub Repository Text Dump')
-    text = st.text_area('Enter the text you want to dump to GitHub')
-
-    if st.button('Submit'):
-        issue = create_github_issue(text)
-        if issue:
-            st.success('Text dumped to GitHub successfully!')
-        else:
-            st.error('Failed to dump text to GitHub.')
-
-# Run the Streamlit app
-if __name__ == '__main__':
-    streamlit_form()
