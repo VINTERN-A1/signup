@@ -41,3 +41,41 @@ if st.button("Sign Up",key="option_tab2"):
     # Display a success message
     st.success("Succesfully Registered")
     placeholder = st.empty()
+
+
+import streamlit as st
+from github import Github
+
+# GitHub credentials
+github_username = 'vintern-a1'
+github_token = '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'
+
+# GitHub repository info
+repo_owner = 'vintern-a1'
+repo_name = 'repo'
+
+# Create a new issue in the GitHub repository
+def create_github_issue(text):
+    try:
+        g = Github(github_token)
+        repo = g.get_repo(f'{repo_owner}/{repo_name}')
+        issue = repo.create_issue(title='Streamlit Form Submission', body=text)
+        return issue
+    except Exception as e:
+        st.error(f'Error creating GitHub issue: {e}')
+
+# Streamlit form
+def streamlit_form():
+    st.header('GitHub Repository Text Dump')
+    text = st.text_area('Enter the text you want to dump to GitHub')
+
+    if st.button('Submit'):
+        issue = create_github_issue(text)
+        if issue:
+            st.success('Text dumped to GitHub successfully!')
+        else:
+            st.error('Failed to dump text to GitHub.')
+
+# Run the Streamlit app
+if __name__ == '__main__':
+    streamlit_form()
