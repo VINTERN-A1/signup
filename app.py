@@ -6,7 +6,7 @@ import uuid
 
 #import streamlit as st
 # GitHub credentials
-ACCESS_TOKEN = "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"
+ACCESS_TOKEN = "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"
 REPO_NAME = "repo"
 
 # Initialize the GitHub object with access token
