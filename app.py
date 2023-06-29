@@ -1,6 +1,31 @@
 import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+st.set_page_config(layout="wide",page_title='VINTERN', page_icon="👩‍🎓")
+st.markdown("""
+        <style>
+               .css-18e3th9 {
+                    padding-top: 2rem;
+                    padding-bottom: 10rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+               .css-1d391kg {
+                    padding-top: 10rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
+#MainMenu {visibility: hidden;}
+hide_streamlit_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 # Google Sheets credentials
 SCOPE = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
