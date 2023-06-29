@@ -1,33 +1,31 @@
 import streamlit as st
-from github import Github
-import uuid
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
-# GitHub credentials
-ACCESS_TOKEN = "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"
-REPO_NAME = "dat"
+# Google Sheets credentials
+SCOPE = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+CREDS_FILE = 'credentials.json'
+SPREADSHEET_ID = '1R9-wMUkE0H8jOy9nO4fjGdeDDez9Vrv2TNrHuVVLe7A'
 
-# Initialize the GitHub object with the access token
-g = Github(ACCESS_TOKEN)
-repo = g.get_user().get_repo(REPO_NAME)
+# Authenticate with Google Sheets API
+creds = ServiceAccountCredentials.from_json_keyfile_name(CREDS_FILE, SCOPE)
+client = gspread.authorize(creds)
+sheet = client.open_by_key(SPREADSHEET_ID).sheet1
 
-placeholder = st.empty()
-email = st.text_input("Email", autocomplete=None)
-st.markdown(" ")
-name = st.text_input("User name", autocomplete=None)
-st.markdown(" ")
-password = st.text_input("Password", autocomplete=None)
-if st.button("Sign Up", key="option_tab2"):
-    # Generate a random file name
-    file_name = str(uuid.uuid4()) + ".txt"
+def registration_form():
+    st.header('Registration Form')
 
-    # Create the text to be written to the file
-    file_contents = f"email: {email}\n"
-    file_contents += f"name: {name}\n"
-    file_contents += f"password: {password}\n"
+    # Input fields
+    email = st.text_input('Email')
+    name = st.text_input('Name')
+    password = st.text_input('Password', type='password')
 
-    # Upload the file to GitHub
-    repo.create_file(file_name, "Committing form data", file_contents)
+    # Submit button
+    if st.button('Register'):
+        # Write the form data to the Google Sheets spreadsheet
+        sheet.append_row([email, name, password])
+        st.success('Registration successful!')
 
-    # Display a success message
-    st.success("Successfully Registered")
-    placeholder = st.empty()
+# Run the Streamlit app
+if __name__ == '__main__':
+    registration_form()
