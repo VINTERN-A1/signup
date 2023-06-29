@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "melodic-rig-391423",
+  "private_key_id": "8182f45e069b74a1ce340da490086035ef8f065d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCKVy9qwFYHnfpk\nO4QnFjqU02y7JSNw9fPxnfv9BNE+SAOyK33QULxVG6nJU3pZzIG82jnQgRxhyPJS\n94YM8KvBZUAtfNNUYwWowEMFKAXZQOnTOpWC2/LJ5CYEBnO7YAEjSQEyikc0e5kw\niDfdAUZRG+B3vm866ezh5+1yxx2kYQ4JODQXxoylEMUKI1MUpOT7z+EPk1dBwH6n\nxhPz7t80NQseGbV88NKU6T/SGBy4IoaVPD0AppUlQ7hoypZpLMs9TjovZKboH4vB\nMqDG2WY0S6aecsceb0ivhvjAH8EIzoz3UeQOwQq5jFIg0ZFYZMU0bXBjyEDZ9kfs\ntcjeYOnvAgMBAAECggEAPPpcKMJZyWa9oWPIhxAZx1MAOOeQXTDUk7pvAeKXNsw4\ncNcR0Hpd4WfdqaPVqPJnd257kGfwsjuIcMCxQk/tbUQri0Fbx3UUYANLJ2EyXsZp\nqtVGZNV9ibc6eIi9h6i0J7D8yaHA7CXU6tsIQK7Yp1TR1wZGciH9a8A23mJdMwB8\n3NifIdXIn1fcg3ujZlS0Xvt2EO30GGnCd0Yg5mCAxFb1gahpvEbAYo3U0+dvW/Yt\nyGugF6/MdnctjUWX214fR2QXyV1LhmZUFjvubCXNT7umPSP2q8WUqPKKwk7OzGwm\nsNZ2s5EoHUEOPerxM6zXPlUJvpyIZ5stnNR6CML+6QKBgQDB3yL8OC8xh7viLNUq\ndiJeObtJnumWQzVTWssW9JQ9c+3bh9eTy1d0pTmpFQckeK/JK2DHvkCp7dn3BGVv\nRaG5suKZ6d/ZtkvQNU8XPD2sMwIwqtWypc1hnKKnxd7tR6L5ny9G2dX/T7R5dQsF\nsGAFzIrV1JWqpptC3f15ZGnndwKBgQC2rGKKAahJfc64xGAQt/723WB0OBw8qOcj\nwkWpfbseoF031PvpDQKnjejwqKekl4E4/QCLlZYau2JdSbFXrRlNP4HGZETgcg4z\nFJtLC9F1AEOE4ITJXAvCaDw3YG05g7Q+aCkj/PFbbKsqFOhpFJBeX+cIt3kHw/Sa\nwhb6xq2fSQKBgQCFS+o+CFNKdszToYee/kJ7Dq6a28w3KFaNzSs9yUPzTLYJ7shm\nMbUb2k5e1rpmdSRH6K9OJp1HOOZYVIl5jCK6DyiGMqtagWB283BBxYWR1DB5TbxI\nbH9d0dh0CjRQaKTBhJV43WWpeR/ZMoQ1kSM0WYJLqzKMdqjhvMf+ou+92QKBgB7W\ny2vxC7AchSG8RVuNNIYIqZf1QQ8clKj8yzXp/AUXnaUnV7/oamJPGtxGHMc0rKQq\nUkU+Y7DvoZOONVpP5s2bwxTzKI2bs7n76JuqyxmtibiNDt3PpEyVvFS8+rOTAILo\nosloknaUyfC4xuO2jQjht+dI0i31bv4Rdj+v+u/BAoGBALzxnrDexvka4PH2RGl9\nXv+QoTFre6la/uG94bsrhD/A8fYxSJmO7xZV7maD+zxmxVJ6KxI5qjfkfuGMmyDH\nlEYc7JcTLKpN++DbQk4wNCeq3FfrOYwvaW8UmRXCkFyUiLtW/2S+hy8/RyD+m6t5\n+TkOuJWXUQfJMW9Bi3+LVQ1v\n-----END PRIVATE KEY-----\n",
+  "client_email": "editor-vintern@melodic-rig-391423.iam.gserviceaccount.com",
+  "client_id": "101865757710058222038",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/editor-vintern%40melodic-rig-391423.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
