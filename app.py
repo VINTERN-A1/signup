@@ -1,7 +1,7 @@
 import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-st.set_page_config(layout="wide",page_title='VINTERN', page_icon="👩‍🎓")
+st.set_page_config(page_title='VINTERN', page_icon="👩‍🎓")
 st.markdown("""
         <style>
                .css-18e3th9 {
