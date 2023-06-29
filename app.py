@@ -16,6 +16,7 @@ def registration_form():
     st.header('Registration Form')
 
     # Input fields
+    placeholder = st.empty()
     email = st.text_input('Email',autocomplete = None)
     name = st.text_input('Username',autocomplete = None)
     password = st.text_input('Password', type='password')
