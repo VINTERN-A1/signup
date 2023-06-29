@@ -3,8 +3,8 @@ from github import Github
 import uuid
 
 # GitHub credentials
-ACCESS_TOKEN = "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"
-REPO_NAME = "repo"
+ACCESS_TOKEN = "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"
+REPO_NAME = "dat"
 
 # Initialize the GitHub object with the access token
 g = Github(ACCESS_TOKEN)
