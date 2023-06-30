@@ -1,7 +1,10 @@
 [ui]
 hideTopBar = true
 
+
 [theme]
-base="light"
-primaryColor="#f9f9f9"
-secondaryBackgroundColor="#9c89f8"
+primaryColor="#000000"
+backgroundColor="#9c89f8"
+secondaryBackgroundColor="#ffffff"
+textColor="#1f212f"
+font="serif"
