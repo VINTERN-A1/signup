@@ -3,5 +3,5 @@ hideTopBar = true
 
 [theme]
 base="light"
-primaryColor="#6a9af9"
-secondaryBackgroundColor="#f9f9f9"
+primaryColor="#f9f9f9"
+secondaryBackgroundColor="#9c89f8"
