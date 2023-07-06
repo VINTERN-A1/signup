@@ -51,6 +51,7 @@ def registration_form():
         # Write the form data to the Google Sheets spreadsheet
         sheet.append_row([email, name, password])
         st.success('Registration successful!')
+        st.info("Account verification pending... wait for confirmation.")    
 
 # Run the Streamlit app
 if __name__ == '__main__':
