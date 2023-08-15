@@ -39,6 +39,7 @@ sheet = client.open_by_key(SPREADSHEET_ID).sheet1
 
 def registration_form():
     st.header('Registration Form')
+    st.warning("Don't register more than once. The LMS cannot be accessed until we grant you access. Access to the LMS will be granted to those who obtained offer letters. ")
 
     # Input fields
     placeholder = st.empty()
@@ -51,7 +52,7 @@ def registration_form():
         # Write the form data to the Google Sheets spreadsheet
         sheet.append_row([email, name, password])
         st.success('Registration successful!')
-        st.info("Account verification pending... wait for confirmation.")    
+        st.info("Wait for confirmation while your account is being verified. Once your account has been verified, we will mail you. You cannot access the LMS if you haven't enrolled to our internship programs. ")    
 
 # Run the Streamlit app
 if __name__ == '__main__':
